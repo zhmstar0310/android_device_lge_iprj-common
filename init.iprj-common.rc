@@ -174,7 +174,7 @@ service kickstart /system/bin/qcks l
     disabled
 
 # Start kickstart if csfb or svlte2a target
-on property:ro.baseband=csfb
+on property:ro.baseband=svlte2a
     wait /dev/ttyHSL1
     mkdir /data/qcks 0770 system system
     write /sys/module/subsystem_restart/parameters/restart_level 2
